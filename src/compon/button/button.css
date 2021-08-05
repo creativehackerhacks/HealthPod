@@ -1,0 +1,52 @@
+button {
+  background-color: #013f9b;
+  display: grid;
+  color: white;
+  width: 200px;
+  height: 44px;
+  border: none;
+  border-radius: 100px;
+  line-height: 44px;
+}
+
+.component-button.sign-in button {
+  background-color: #c2185b;
+}
+
+.component-button.sign-up button {
+  background-color: #512da8;
+}
+
+
+
+
+
+
+
+/* .component-button {
+    display: inline-flex;
+    width: 25%;
+    flex: 1 0 auto;
+  }
+  
+  .component-button.wide {
+    width: 50%;
+  }
+  
+  .component-button button {
+    background-color: #fc2f2f;
+    border: 0;
+    font-size: 1.5rem;
+    margin: 0 1px 0 0;
+    flex: 1 0 auto;
+    padding: 0;
+  }
+  
+  .component-button:last-child button {
+    margin-right: 0;
+  }
+  
+  .component-button.orange button {
+    background-color: #f5923e;
+    color: white;
+  } */

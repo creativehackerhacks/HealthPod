@@ -1,0 +1,49 @@
+.search-container {
+  width: 100%;
+  background-color: #fff;
+  display: grid;
+  grid-template-rows: 360px auto;
+}
+
+.search-top {
+  width: 100%;
+  height: 100%;
+  background-color: #f1f5ff;
+}
+
+.search-top-container {
+  display: grid;
+  padding: 24px;
+  align-items: center;
+}
+
+.search-title {
+  color: #2c2760;
+  font-size: 2em;
+}
+
+.search-disease {
+  color: #4c4786;
+  font-size: 1.6em;
+}
+
+.search-bottom {
+  padding: 24px;
+}
+
+.search-tab {
+  margin-bottom: 16px;
+}
+
+.search-tab-input {
+  width: 100%;
+  border-radius: 100px;
+  height: 48px;
+  padding-left: 16px;
+  border: 2px solid #919191;
+  font-size: 1em;
+}
+
+.MuiChip-root.search-symptom-chip {
+  margin: 8px 16px 0px 0px;
+}

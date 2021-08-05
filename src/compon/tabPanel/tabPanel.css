@@ -1,0 +1,13 @@
+.tab-container {
+  display: grid;
+  grid-template-rows: auto;
+  row-gap: 16px;
+}
+
+.link {
+  color: transparent;
+}
+
+.active {
+  color: #17bf63;
+}

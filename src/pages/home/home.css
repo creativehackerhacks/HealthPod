@@ -1,0 +1,23 @@
+.root-container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 300px auto;
+}
+
+.vertical-section-first {
+  display: grid;
+  background-color: #15202b;
+}
+
+.vertical-section-second {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-gutter: 2px;
+}
+
+.section-tabs {
+  width: 80%;
+  place-self: center;
+}
