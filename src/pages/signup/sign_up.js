@@ -1,4 +1,4 @@
-import "./sign_in.css";
+import "./sign_up.css";
 import Home from "../home/home";
 // import InputForm from "../../compon/input_form/ip_form";
 import React, { useState } from "react";
@@ -24,41 +24,18 @@ export default function SignIn() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
-  function handleGoogleSignIn(e) {
-    e.preventDefault();
-    var provider = firebaseConfig.auth.GoogleAuthProvider();
-    firebaseConfig
-      .auth()
-      .signInWithPopup(provider)
-      .then((result) => {
-        /** @type {firebase.auth.OAuthCredential} */
-        var credential = result.credential;
-
-        // This gives you a Google Access Token. You can use it to access the Google API.
-        var token = credential.accessToken;
-        // The signed-in user info.
-        var user = result.user;
-        // ...
-      })
-      .catch((error) => {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // The email of the user's account used.
-        var email = error.email;
-        // The firebase.auth.AuthCredential type that was used.
-        var credential = error.credential;
-        // ...
-      });
+  function handleClick() {
+    // history.replace('/Home');
+    console.log("Clicked");
   }
 
-  function handleSignIn(e) {
+  function handleSignUp(e) {
     e.preventDefault();
     console.log("email: ", email);
     console.log("password: ", password);
     firebaseConfig
       .auth()
-      .signInWithEmailAndPassword(email, password)
+      .createUserWithEmailAndPassword(email, password)
       .catch((error) => {
         console.log("Incorrect email or password");
       });
@@ -81,10 +58,10 @@ export default function SignIn() {
         className="form-root"
         noValidate
         autoComplete="off"
-        onSubmit={handleSignIn}
+        onSubmit={handleSignUp}
       >
         <div className="form-info">
-          <h1>Welcome back! Glad to see you</h1>
+          <h1>Create a new account</h1>
         </div>
         <div className="form-container">
           <TextField
@@ -112,22 +89,6 @@ export default function SignIn() {
           >
             Submit
           </Button>
-        </div>
-        <div className="form-bottom">
-          <div className="div-container">
-            <Divider className="divider" variant="middle" />
-            <h4>or</h4>
-          </div>
-          <div className="div-google-signin">
-            <Button
-              className={classes.contained}
-              variant="contained"
-              color="secondary"
-              onClick={handleGoogleSignIn}
-            >
-              Google signin
-            </Button>
-          </div>
         </div>
       </form>
     </div>
